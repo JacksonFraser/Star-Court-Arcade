@@ -217,12 +217,12 @@ export default function Home() {
               Open Mon–Fri 9–5 · Sat 9–1 · Sunday closed
             </div>
           </div>
-          <a
-            href="#"
+          <Link
+            to="/visit"
             className="rounded-[2px] border border-cta-line px-[30px] py-[15px] text-[12px] uppercase tracking-[0.09em] text-cta-body transition-colors hover:border-brass hover:text-brass"
           >
             Plan your visit
-          </a>
+          </Link>
         </div>
       </div>
     </>

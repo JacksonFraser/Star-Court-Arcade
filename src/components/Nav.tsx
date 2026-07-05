@@ -2,16 +2,14 @@ import { Link, useLocation } from 'react-router-dom'
 
 interface NavLink {
   label: string
-  // A router path for built pages, or null for pages that only exist in the
-  // design and haven't been implemented yet (rendered as inert `#` links).
-  to: string | null
+  to: string
 }
 
 const LINKS: NavLink[] = [
   { label: 'Home', to: '/' },
   { label: 'History', to: '/history' },
   { label: 'Shops', to: '/shops' },
-  { label: 'Visit', to: null },
+  { label: 'Visit', to: '/visit' },
 ]
 
 export default function Nav() {
@@ -29,14 +27,10 @@ export default function Nav() {
             const className =
               'relative py-0.5 transition-colors hover:text-brass ' +
               (current ? 'text-brass' : 'text-muted')
-            return link.to ? (
+            return (
               <Link key={link.label} to={link.to} className={className}>
                 {link.label}
               </Link>
-            ) : (
-              <a key={link.label} href="#" className={className}>
-                {link.label}
-              </a>
             )
           })}
         </div>

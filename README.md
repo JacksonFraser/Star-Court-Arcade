@@ -23,11 +23,12 @@ npm run preview  # preview the production build
 - `src/pages/Home.tsx` — the Home page, composed from section blocks
 - `src/pages/History.tsx` — decade-by-decade timeline + archival gallery
 - `src/pages/Shops.tsx` — retail / eateries directory + theatre section
+- `src/pages/Visit.tsx` — map, hours, getting-here info + closing CTA
 - `src/components/` — `Nav`, `Footer`, and the `Placeholder` photo stand-in
 - `src/index.css` — Tailwind import + `@theme` palette and font tokens
 
 ## Status
 
-The **Home** (`/`), **History** (`/history`) and **Shops** (`/shops`) pages
-are implemented. The nav/footer link to Visit is a placeholder (`#`) — that
-page exists in the design project but has not been built yet.
+All four pages from the design project are implemented and interlinked:
+**Home** (`/`), **History** (`/history`), **Shops** (`/shops`) and **Visit**
+(`/visit`). Photos and the map are `Placeholder` blocks awaiting real assets.

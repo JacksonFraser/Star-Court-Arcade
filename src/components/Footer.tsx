@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom'
 
 interface FooterLink {
   label: string
-  to: string | null
+  to: string
 }
 
 const LINKS: FooterLink[] = [
   { label: 'Home', to: '/' },
   { label: 'History', to: '/history' },
   { label: 'Shops', to: '/shops' },
-  { label: 'Visit', to: null },
+  { label: 'Visit', to: '/visit' },
 ]
 
 export default function Footer() {
@@ -20,25 +20,15 @@ export default function Footer() {
           Star Court Arcade
         </div>
         <div className="flex gap-7 text-[12px] uppercase tracking-[0.08em]">
-          {LINKS.map((link) =>
-            link.to ? (
-              <Link
-                key={link.label}
-                to={link.to}
-                className="transition-colors hover:text-brass"
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <a
-                key={link.label}
-                href="#"
-                className="transition-colors hover:text-brass"
-              >
-                {link.label}
-              </a>
-            ),
-          )}
+          {LINKS.map((link) => (
+            <Link
+              key={link.label}
+              to={link.to}
+              className="transition-colors hover:text-brass"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
         <div className="text-[12px] text-footer-dim">
           Lismore, NSW · A Northern Rivers landmark
