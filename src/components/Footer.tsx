@@ -8,7 +8,7 @@ interface FooterLink {
 const LINKS: FooterLink[] = [
   { label: 'Home', to: '/' },
   { label: 'History', to: '/history' },
-  { label: 'Shops', to: null },
+  { label: 'Shops', to: '/shops' },
   { label: 'Visit', to: null },
 ]
 

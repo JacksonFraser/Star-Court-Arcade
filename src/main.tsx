@@ -5,6 +5,7 @@ import './index.css'
 import Layout from './components/Layout.tsx'
 import Home from './pages/Home.tsx'
 import History from './pages/History.tsx'
+import Shops from './pages/Shops.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="history" element={<History />} />
+          <Route path="shops" element={<Shops />} />
         </Route>
       </Routes>
     </BrowserRouter>

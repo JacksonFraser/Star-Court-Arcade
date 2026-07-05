@@ -10,7 +10,7 @@ interface NavLink {
 const LINKS: NavLink[] = [
   { label: 'Home', to: '/' },
   { label: 'History', to: '/history' },
-  { label: 'Shops', to: null },
+  { label: 'Shops', to: '/shops' },
   { label: 'Visit', to: null },
 ]
 

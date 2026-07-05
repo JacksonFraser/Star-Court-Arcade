@@ -72,12 +72,12 @@ export default function Home() {
           >
             Explore the history
           </Link>
-          <a
-            href="#"
+          <Link
+            to="/shops"
             className="rounded-[2px] border border-line-brass px-[30px] py-[15px] text-[12px] uppercase tracking-[0.09em] text-ink transition-colors hover:border-brass hover:text-brass"
           >
             Today's shops
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -183,22 +183,22 @@ export default function Home() {
           <h2 className="m-0 font-serif text-[34px] font-normal">
             In the arcade today
           </h2>
-          <a
-            href="#"
+          <Link
+            to="/shops"
             className="text-[12px] uppercase tracking-[0.1em] text-brass transition-colors hover:text-brass"
           >
             Full directory →
-          </a>
+          </Link>
         </div>
         <div className="grid grid-cols-3 gap-7 max-md:grid-cols-1">
           {SHOPS.map((shop) => (
-            <a key={shop.title} href="#" className="group block">
+            <Link key={shop.title} to="/shops" className="group block">
               <Placeholder className="h-[220px] rounded-[3px] transition-[filter] duration-[250ms] group-hover:brightness-[1.04] group-hover:saturate-[1.05]">
                 {shop.photo}
               </Placeholder>
               <div className="mt-4 font-serif text-[20px]">{shop.title}</div>
               <div className="mt-1 text-[13.5px] text-muted-2">{shop.blurb}</div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

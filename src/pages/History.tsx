@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import Placeholder from '../components/Placeholder.tsx'
 
 interface Decade {
@@ -242,12 +243,12 @@ export default function History() {
             See who's in the arcade today
           </div>
         </div>
-        <a
-          href="#"
+        <Link
+          to="/shops"
           className="border-b border-line-brass pb-1 text-[13px] uppercase tracking-[0.1em] text-brass transition-colors hover:text-brass"
         >
           The shop directory →
-        </a>
+        </Link>
       </div>
     </>
   )
