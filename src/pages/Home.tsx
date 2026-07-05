@@ -1,22 +1,37 @@
-import Nav from '../components/Nav.jsx'
-import Footer from '../components/Footer.jsx'
-import Placeholder from '../components/Placeholder.jsx'
+import { Link } from 'react-router-dom'
+import Placeholder from '../components/Placeholder.tsx'
 
-const FACTS = [
+interface Fact {
+  value: string
+  label: string
+}
+
+interface TimelinePoint {
+  year: string
+  text: string
+}
+
+interface ShopTease {
+  photo: string
+  title: string
+  blurb: string
+}
+
+const FACTS: Fact[] = [
   { value: '1921', label: 'Opened its doors' },
   { value: '100+', label: 'Years on Molesworth St' },
   { value: '20+', label: 'Shops & eateries' },
   { value: '1963', label: 'Became an arcade' },
 ]
 
-const TIMELINE = [
+const TIMELINE: TimelinePoint[] = [
   { year: '1921', text: 'Opens 18 July for T. J. Dorgan.' },
   { year: '1930s', text: 'Sound arrives on an RCA Photophone.' },
   { year: '1963', text: 'Stalls become an arcade of shops.' },
   { year: '2022', text: 'Flood restoration reveals her Deco bones.' },
 ]
 
-const SHOPS = [
+const SHOPS: ShopTease[] = [
   {
     photo: 'PHOTO — vintage & curiosity shop',
     title: 'Curiosity & gifts',
@@ -36,9 +51,7 @@ const SHOPS = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <Nav />
-
+    <>
       {/* ===== HERO ===== */}
       <div className="mx-auto max-w-[1180px] px-10 pb-[58px] pt-20 text-center">
         <div className="mb-[30px] text-[12px] uppercase tracking-[0.34em] text-brass">
@@ -53,14 +66,14 @@ export default function Home() {
           theatre upstairs. This is her story — and her open door today.
         </p>
         <div className="mt-10 flex justify-center gap-[14px] max-sm:flex-col max-sm:items-center">
-          <a
-            href="#history"
+          <Link
+            to="/history"
             className="rounded-[2px] bg-ink px-[30px] py-[15px] text-[12px] uppercase tracking-[0.09em] text-cream transition-colors hover:bg-brass"
           >
             Explore the history
-          </a>
+          </Link>
           <a
-            href="#shops"
+            href="#"
             className="rounded-[2px] border border-line-brass px-[30px] py-[15px] text-[12px] uppercase tracking-[0.09em] text-ink transition-colors hover:border-brass hover:text-brass"
           >
             Today's shops
@@ -124,12 +137,12 @@ export default function Home() {
             flood of 2022, her original Art&nbsp;Deco detailing was uncovered
             once more.
           </p>
-          <a
-            href="#history"
+          <Link
+            to="/history"
             className="border-b border-line-brass pb-1 text-[13px] uppercase tracking-[0.1em] text-brass transition-colors hover:text-brass"
           >
             Read the decade-by-decade history →
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -171,7 +184,7 @@ export default function Home() {
             In the arcade today
           </h2>
           <a
-            href="#shops"
+            href="#"
             className="text-[12px] uppercase tracking-[0.1em] text-brass transition-colors hover:text-brass"
           >
             Full directory →
@@ -179,7 +192,7 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-3 gap-7 max-md:grid-cols-1">
           {SHOPS.map((shop) => (
-            <a key={shop.title} href="#shops" className="group block">
+            <a key={shop.title} href="#" className="group block">
               <Placeholder className="h-[220px] rounded-[3px] transition-[filter] duration-[250ms] group-hover:brightness-[1.04] group-hover:saturate-[1.05]">
                 {shop.photo}
               </Placeholder>
@@ -205,15 +218,13 @@ export default function Home() {
             </div>
           </div>
           <a
-            href="#visit"
+            href="#"
             className="rounded-[2px] border border-cta-line px-[30px] py-[15px] text-[12px] uppercase tracking-[0.09em] text-cta-body transition-colors hover:border-brass hover:text-brass"
           >
             Plan your visit
           </a>
         </div>
       </div>
-
-      <Footer />
-    </div>
+    </>
   )
 }
