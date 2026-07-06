@@ -190,7 +190,7 @@ export default function History() {
               <div className="font-serif text-[34px] leading-none text-brass">
                 {decade.era}
               </div>
-              <div className="mt-2 text-[12px] uppercase tracking-[0.08em] text-[#8a7f6b]">
+              <div className="mt-2 text-[12px] uppercase tracking-[0.08em] text-note">
                 {decade.tag}
               </div>
             </div>
@@ -226,7 +226,7 @@ export default function History() {
               </div>
             ))}
           </div>
-          <div className="mt-[26px] text-center text-[13px] italic text-[#8a7f6b]">
+          <div className="mt-[26px] text-center text-[13px] italic text-note">
             Have a photo or a memory of the Star Court? We'd love to add it to
             the album.
           </div>
@@ -236,7 +236,7 @@ export default function History() {
       {/* ===== NEXT ===== */}
       <div className="mx-auto flex max-w-[1180px] flex-wrap items-center justify-between gap-5 px-10 py-[60px]">
         <div>
-          <div className="mb-2 text-[12px] uppercase tracking-[0.1em] text-[#8a7f6b]">
+          <div className="mb-2 text-[12px] uppercase tracking-[0.1em] text-note">
             Next
           </div>
           <div className="font-serif text-[28px]">
