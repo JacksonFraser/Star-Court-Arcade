@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 interface NavLink {
@@ -47,6 +47,26 @@ function MoonIcon() {
   )
 }
 
+function MenuIcon() {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <g stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </g>
+    </svg>
+  )
+}
+
+function CloseIcon() {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <g stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+        <path d="M6 6l12 12M18 6L6 18" />
+      </g>
+    </svg>
+  )
+}
+
 function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>(currentTheme)
 
@@ -76,14 +96,23 @@ function ThemeToggle() {
 
 export default function Nav() {
   const { pathname } = useLocation()
+  const [open, setOpen] = useState(false)
+
+  // Close the mobile menu whenever the route changes (e.g. a link was tapped).
+  useEffect(() => setOpen(false), [pathname])
 
   return (
     <div className="sticky top-0 z-20 bg-cream/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-[1180px] items-center justify-between px-10 py-[22px]">
-        <Link to="/" className="font-serif text-[19px] uppercase tracking-[0.14em]">
+      <div className="mx-auto flex max-w-[1180px] items-center justify-between px-5 md:px-10 py-[22px]">
+        <Link
+          to="/"
+          className="whitespace-nowrap font-serif text-[19px] uppercase tracking-[0.14em]"
+        >
           Star Court
         </Link>
-        <div className="flex items-center gap-9 text-[12px] uppercase tracking-[0.11em]">
+
+        {/* Desktop links — hidden on small screens */}
+        <div className="flex items-center gap-9 text-[12px] uppercase tracking-[0.11em] max-md:hidden">
           {LINKS.map((link) => {
             const current = link.to === pathname
             const className =
@@ -97,8 +126,42 @@ export default function Nav() {
           })}
           <ThemeToggle />
         </div>
+
+        {/* Mobile controls — theme toggle + hamburger */}
+        <div className="hidden items-center gap-3 max-md:flex">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-brass hover:text-brass"
+          >
+            {open ? <CloseIcon /> : <MenuIcon />}
+          </button>
+        </div>
       </div>
-      <div className="mx-10 h-px bg-line" />
+
+      {/* Mobile dropdown panel */}
+      {open && (
+        <div className="border-t border-line px-5 pb-3 pt-1 md:hidden">
+          <div className="flex flex-col text-[13px] uppercase tracking-[0.11em]">
+            {LINKS.map((link) => {
+              const current = link.to === pathname
+              const className =
+                'py-3 transition-colors hover:text-brass ' +
+                (current ? 'text-brass' : 'text-muted')
+              return (
+                <Link key={link.label} to={link.to} className={className}>
+                  {link.label}
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+      )}
+
+      <div className="mx-5 md:mx-10 h-px bg-line" />
     </div>
   )
 }

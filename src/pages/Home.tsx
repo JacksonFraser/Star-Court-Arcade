@@ -53,7 +53,7 @@ export default function Home() {
   return (
     <>
       {/* ===== HERO ===== */}
-      <div className="mx-auto max-w-[1180px] px-10 pb-[58px] pt-20 text-center">
+      <div className="mx-auto max-w-[1180px] px-5 md:px-10 pb-[58px] pt-20 text-center">
         <div className="mb-[30px] text-[12px] uppercase tracking-[0.34em] text-brass">
           Lismore, New South Wales · Since 1921
         </div>
@@ -82,7 +82,7 @@ export default function Home() {
       </div>
 
       {/* ===== HERO IMAGE ===== */}
-      <div className="mx-auto max-w-[1180px] px-10 pb-[66px]">
+      <div className="mx-auto max-w-[1180px] px-5 md:px-10 pb-[66px]">
         <Placeholder className="h-[440px] rounded-[3px]">
           PHOTO — arcade breezeway, leadlight &amp; pressed-metal ceiling,
           present day
@@ -114,7 +114,7 @@ export default function Home() {
       </div>
 
       {/* ===== STORY INTRO ===== */}
-      <div className="mx-auto grid max-w-[1180px] grid-cols-2 items-center gap-[60px] px-10 py-[76px] max-md:grid-cols-1">
+      <div className="mx-auto grid max-w-[1180px] grid-cols-2 items-center gap-[60px] px-5 md:px-10 py-[76px] max-md:grid-cols-1">
         <Placeholder className="h-[380px] rounded-[3px]">
           ARCHIVAL — Star Court picture theatre, mid-century
         </Placeholder>
@@ -148,7 +148,7 @@ export default function Home() {
 
       {/* ===== TIMELINE TEASER ===== */}
       <div className="border-y border-line bg-cream-soft">
-        <div className="mx-auto max-w-[1180px] px-10 py-16">
+        <div className="mx-auto max-w-[1180px] px-5 md:px-10 py-16">
           <div className="mb-[30px] font-serif text-[13px] uppercase tracking-[0.26em] text-brass">
             A few turning points
           </div>
@@ -178,7 +178,7 @@ export default function Home() {
       </div>
 
       {/* ===== SHOPS TEASER ===== */}
-      <div className="mx-auto max-w-[1180px] px-10 py-[76px]">
+      <div className="mx-auto max-w-[1180px] px-5 md:px-10 py-[76px]">
         <div className="mb-[34px] flex items-baseline justify-between">
           <h2 className="m-0 font-serif text-[34px] font-normal">
             In the arcade today
@@ -205,7 +205,7 @@ export default function Home() {
 
       {/* ===== VISIT CTA ===== */}
       <div className="bg-cta text-cta-body">
-        <div className="mx-auto flex max-w-[1180px] flex-wrap items-center justify-between gap-[34px] px-10 py-16">
+        <div className="mx-auto flex max-w-[1180px] flex-wrap items-center justify-between gap-[34px] px-5 md:px-10 py-16">
           <div>
             <div className="mb-4 text-[12px] uppercase tracking-[0.28em] text-brass-bright">
               Come and visit

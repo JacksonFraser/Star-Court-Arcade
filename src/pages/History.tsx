@@ -153,7 +153,7 @@ export default function History() {
   return (
     <>
       {/* ===== HEADER ===== */}
-      <div className="mx-auto max-w-[900px] px-10 pb-[30px] pt-[78px] text-center">
+      <div className="mx-auto max-w-[900px] px-5 md:px-10 pb-[30px] pt-[78px] text-center">
         <div className="mb-[26px] text-[12px] uppercase tracking-[0.34em] text-brass">
           A century on Molesworth Street
         </div>
@@ -169,14 +169,14 @@ export default function History() {
       </div>
 
       {/* ===== HERO IMAGE ===== */}
-      <div className="mx-auto max-w-[1180px] px-10 pb-5 pt-[26px]">
+      <div className="mx-auto max-w-[1180px] px-5 md:px-10 pb-5 pt-[26px]">
         <Placeholder className="h-[400px] rounded-[3px]">
           ARCHIVAL — Star Court façade &amp; Molesworth Street, early years
         </Placeholder>
       </div>
 
       {/* ===== TIMELINE ===== */}
-      <div className="mx-auto max-w-[1000px] px-10 pb-5 pt-10">
+      <div className="mx-auto max-w-[1000px] px-5 md:px-10 pb-5 pt-10">
         {DECADES.map((decade, i) => (
           <div
             key={i}
@@ -213,7 +213,7 @@ export default function History() {
 
       {/* ===== GALLERY ===== */}
       <div className="mt-5 border-t border-line bg-cream-soft">
-        <div className="mx-auto max-w-[1180px] px-10 py-[70px]">
+        <div className="mx-auto max-w-[1180px] px-5 md:px-10 py-[70px]">
           <div className="mb-[30px] text-center font-serif text-[13px] uppercase tracking-[0.26em] text-brass">
             From the album
           </div>
@@ -234,7 +234,7 @@ export default function History() {
       </div>
 
       {/* ===== NEXT ===== */}
-      <div className="mx-auto flex max-w-[1180px] flex-wrap items-center justify-between gap-5 px-10 py-[60px]">
+      <div className="mx-auto flex max-w-[1180px] flex-wrap items-center justify-between gap-5 px-5 md:px-10 py-[60px]">
         <div>
           <div className="mb-2 text-[12px] uppercase tracking-[0.1em] text-note">
             Next
