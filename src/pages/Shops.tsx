@@ -100,7 +100,7 @@ export default function Shops() {
   return (
     <>
       {/* ===== HEADER ===== */}
-      <div className="mx-auto max-w-[900px] px-10 pb-5 pt-[78px] text-center">
+      <div className="mx-auto max-w-[900px] px-5 md:px-10 pb-5 pt-[78px] text-center">
         <div className="mb-[26px] text-[12px] uppercase tracking-[0.34em] text-brass">
           Retail · Cafés &amp; eateries · The theatre
         </div>
@@ -115,7 +115,7 @@ export default function Shops() {
       </div>
 
       {/* ===== CATEGORY JUMP ===== */}
-      <div className="mx-auto flex max-w-[1180px] flex-wrap justify-center gap-3 px-10 pb-[10px] pt-6">
+      <div className="mx-auto flex max-w-[1180px] flex-wrap justify-center gap-3 px-5 md:px-10 pb-[10px] pt-6">
         {CATEGORIES.map((cat) => (
           <a
             key={cat.href}
@@ -130,7 +130,7 @@ export default function Shops() {
       {/* ===== RETAIL ===== */}
       <div
         id="retail"
-        className="mx-auto max-w-[1180px] scroll-mt-[90px] px-10 pb-[10px] pt-[50px]"
+        className="mx-auto max-w-[1180px] scroll-mt-[90px] px-5 md:px-10 pb-[10px] pt-[50px]"
       >
         <SectionHeading title="Shops & retail" />
         <div className="grid grid-cols-3 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
@@ -143,7 +143,7 @@ export default function Shops() {
       {/* ===== EAT ===== */}
       <div
         id="eat"
-        className="mx-auto max-w-[1180px] scroll-mt-[90px] px-10 pb-[10px] pt-[50px]"
+        className="mx-auto max-w-[1180px] scroll-mt-[90px] px-5 md:px-10 pb-[10px] pt-[50px]"
       >
         <SectionHeading title="Cafés & eateries" />
         <div className="grid grid-cols-3 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
@@ -155,7 +155,7 @@ export default function Shops() {
 
       {/* ===== THEATRE ===== */}
       <div id="theatre" className="mt-14 scroll-mt-[90px] bg-cta text-cta-body">
-        <div className="mx-auto grid max-w-[1180px] grid-cols-2 items-center gap-14 px-10 py-[66px] max-md:grid-cols-1 max-md:gap-8">
+        <div className="mx-auto grid max-w-[1180px] grid-cols-2 items-center gap-14 px-5 md:px-10 py-[66px] max-md:grid-cols-1 max-md:gap-8">
           <div>
             <div className="mb-5 text-[12px] uppercase tracking-[0.28em] text-brass-bright">
               Upstairs
@@ -180,7 +180,7 @@ export default function Shops() {
       </div>
 
       {/* ===== TENANT NOTE ===== */}
-      <div className="mx-auto max-w-[900px] px-10 py-14 text-center">
+      <div className="mx-auto max-w-[900px] px-5 md:px-10 py-14 text-center">
         <p className="m-0 text-[15px] italic leading-[1.7] text-muted-2">
           Shop names and details shown here are placeholders. Send through the
           current tenant list and we'll make the directory accurate — logos,

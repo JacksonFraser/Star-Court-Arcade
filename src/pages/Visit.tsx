@@ -46,7 +46,7 @@ export default function Visit() {
   return (
     <>
       {/* ===== HEADER ===== */}
-      <div className="mx-auto max-w-[900px] px-10 pb-5 pt-[78px] text-center">
+      <div className="mx-auto max-w-[900px] px-5 md:px-10 pb-5 pt-[78px] text-center">
         <div className="mb-[26px] text-[12px] uppercase tracking-[0.34em] text-brass">
           Plan your visit
         </div>
@@ -60,7 +60,7 @@ export default function Visit() {
       </div>
 
       {/* ===== MAP + INFO ===== */}
-      <div className="mx-auto grid max-w-[1180px] grid-cols-[1.3fr_1fr] items-stretch gap-11 px-10 py-10 max-md:grid-cols-1">
+      <div className="mx-auto grid max-w-[1180px] grid-cols-[1.3fr_1fr] items-stretch gap-11 px-5 md:px-10 py-10 max-md:grid-cols-1">
         <Placeholder className="min-h-[420px] rounded max-md:min-h-[300px]">
           MAP — Molesworth Street, Lismore CBD
         </Placeholder>
@@ -111,7 +111,7 @@ export default function Visit() {
 
       {/* ===== GETTING HERE ===== */}
       <div className="border-y border-line bg-cream-soft">
-        <div className="mx-auto max-w-[1180px] px-10 py-16">
+        <div className="mx-auto max-w-[1180px] px-5 md:px-10 py-16">
           <div className="mb-[34px] font-serif text-[13px] uppercase tracking-[0.26em] text-brass">
             Getting here
           </div>
@@ -129,7 +129,7 @@ export default function Visit() {
       </div>
 
       {/* ===== CTA ===== */}
-      <div className="mx-auto max-w-[900px] px-10 py-[70px] text-center">
+      <div className="mx-auto max-w-[900px] px-5 md:px-10 py-[70px] text-center">
         <h2 className="mb-4 mt-0 font-serif text-[34px] font-normal">
           A hundred years in, still worth the detour.
         </h2>
