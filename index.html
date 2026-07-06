@@ -12,14 +12,10 @@
     />
     <script>
       // Set the theme before first paint to avoid a flash of the wrong palette.
+      // Default to light; only a saved choice switches away from it.
       (function () {
         try {
-          var stored = localStorage.getItem('theme')
-          var theme =
-            stored ||
-            (window.matchMedia('(prefers-color-scheme: dark)').matches
-              ? 'dark'
-              : 'light')
+          var theme = localStorage.getItem('theme') || 'light'
           document.documentElement.setAttribute('data-theme', theme)
         } catch (e) {}
       })()
