@@ -10,6 +10,20 @@
       href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      // Set the theme before first paint to avoid a flash of the wrong palette.
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme')
+          var theme =
+            stored ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light')
+          document.documentElement.setAttribute('data-theme', theme)
+        } catch (e) {}
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

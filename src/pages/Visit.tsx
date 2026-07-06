@@ -85,7 +85,7 @@ export default function Visit() {
                   <span className="text-body-2">{row.day}</span>
                   <span
                     className={
-                      'font-serif ' + (row.closed ? 'text-[#a89073]' : 'text-ink')
+                      'font-serif ' + (row.closed ? 'text-muted-3' : 'text-ink')
                     }
                   >
                     {row.time}
@@ -93,7 +93,7 @@ export default function Visit() {
                 </div>
               ))}
             </div>
-            <div className="mt-3 text-[12.5px] italic text-[#8a7f6b]">
+            <div className="mt-3 text-[12.5px] italic text-note">
               Individual shops, cafés and the theatre keep their own hours.
             </div>
           </div>

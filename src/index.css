@@ -32,11 +32,57 @@
   --color-footer: #1a150f;
   --color-footer-text: #8a7c64;
   --color-footer-dim: #6b5f4b;
+
+  /* Promoted from inline hex so they respond to the theme */
+  --color-note: #8a7f6b; /* small captions on light surfaces */
+  --color-muted-3: #a89073; /* dimmed / closed-day text */
+  --color-card: #fffdf8; /* raised card surface */
+  --color-cta-body-2: #cbbb9d; /* body text on the dark accent panels */
+  --color-cta-note: #a89876; /* note text on the dark accent panels */
+  --color-ph-bg-dark: #2c251c; /* placeholder on dark panels */
+  --color-ph-fg-dark: #8a7648;
+}
+
+/*
+ * Dark theme. Only the palette tokens change — every utility resolves through
+ * these vars, so components need no per-element dark styles. `ink` and `cream`
+ * swap luminance, which keeps the primary button (bg-ink / text-cream) legible:
+ * it simply inverts to a light button with dark text.
+ * The cta/footer tokens are already dark and stay put in both themes.
+ */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-cream: #16120c;
+  --color-cream-soft: #1e1810;
+  --color-ink: #ece3d1;
+  --color-brass: #c9a24b;
+  --color-brass-bright: #d9b25f;
+
+  --color-line: #352e22;
+  --color-line-soft: #322b20;
+  --color-line-brass: #4a3f28;
+
+  --color-body: #c9bfad;
+  --color-body-2: #d2c8b4;
+  --color-muted: #9a8f7c;
+  --color-muted-2: #8a7e6b;
+  --color-muted-3: #8a7355;
+  --color-note: #9a8f7b;
+
+  --color-card: #201a12;
+
+  --color-ph-bg: #241e15;
+  --color-ph-fg: #7a6a4d;
 }
 
 @layer base {
   * {
     box-sizing: border-box;
+  }
+
+  :root {
+    color-scheme: light;
   }
 
   body {
@@ -45,6 +91,9 @@
     color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
   a {

@@ -70,7 +70,7 @@ const EAT: Shop[] = [
 
 function ShopCard({ shop }: { shop: Shop }) {
   return (
-    <div className="group overflow-hidden rounded border border-line bg-[#fffdf8] transition-[box-shadow,transform] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_30px_rgba(120,95,45,0.13)]">
+    <div className="group overflow-hidden rounded border border-line bg-card transition-[box-shadow,transform] duration-200 hover:-translate-y-[3px] hover:shadow-[0_12px_30px_rgba(120,95,45,0.13)]">
       <Placeholder className="h-[200px] transition-[filter] duration-[250ms] group-hover:brightness-[1.04] group-hover:saturate-[1.05]">
         {shop.photo}
       </Placeholder>
@@ -89,7 +89,7 @@ function SectionHeading({ title }: { title: string }) {
     <div className="mb-7 flex items-baseline gap-4">
       <h2 className="m-0 font-serif text-[32px] font-normal">{title}</h2>
       <div className="h-px flex-1 bg-line" />
-      <span className="text-[12px] uppercase tracking-[0.1em] text-[#8a7f6b]">
+      <span className="text-[12px] uppercase tracking-[0.1em] text-note">
         Placeholder tenants
       </span>
     </div>
@@ -163,17 +163,17 @@ export default function Shops() {
             <h2 className="mb-5 mt-0 font-serif text-[38px] font-normal text-cta-heading">
               The theatre
             </h2>
-            <p className="mb-4 text-[16px] leading-[1.8] text-[#cbbb9d]">
+            <p className="mb-4 text-[16px] leading-[1.8] text-cta-body-2">
               Above the arcade, the Star Court's original auditorium lives on as
               a home for art-house film, festivals and live performance — a
               working picture theatre a century after the first screening.
             </p>
-            <p className="m-0 text-[14px] leading-[1.7] text-[#a89876]">
+            <p className="m-0 text-[14px] leading-[1.7] text-cta-note">
               Session times and events change regularly. Check the noticeboard
               in the arcade or ask at the box office.
             </p>
           </div>
-          <Placeholder className="h-[320px] rounded-[3px] bg-[#2c251c] text-[#8a7648]">
+          <Placeholder className="h-[320px] rounded-[3px] bg-ph-bg-dark text-ph-fg-dark">
             PHOTO — the theatre auditorium &amp; screen
           </Placeholder>
         </div>
